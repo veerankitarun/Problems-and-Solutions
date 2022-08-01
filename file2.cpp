@@ -103,6 +103,149 @@ int main(){
 
 }
 
+Q6.
+	// Write a C program that accepts two item’s weight (floating points' values ) and number of purchase (floating points' values) and calculate the average value of the items. Go to the editor
+//                 Test Data :
+// Weight - Item1: 15
+// No. of item1: 5
+// Weight - Item2: 25
+// No. of item2: 4
+
+//                   Expected Output:
+// Average Value = 19.444444
+
+#include <stdio.h>
+int main()
+{
+    double wi1, wi2, ni1, ni2, result;
+    printf("Weight - item1:");
+    scanf("%lf", &wi1);
+    printf("No. of item1: ");
+    scanf("%lf", &ni1);
+    printf("Weight - Item2:");
+    scanf("%lf", &wi2);
+    printf("No. of item2:");
+    scanf("%lf", &ni2);
+    result =((wi1*ni1)+(wi2*ni2))/(ni1+ni2);
+    
+    
+    printf("Average Value = %f \n",result);
+    return 0;
+  
+}
+
+Q7.  // Write a C program that accepts an employee's ID, total worked hours of a month and the amount he received per hour. Print the employee's ID and salary (with two decimal places) of a particular month. 
+
+//                           Test Data :
+// Input the Employees ID(Max. 10 chars): 0342
+// Input the working hrs: 8
+// Salary amount/hr: 15000
+
+//                             Expected Output:
+// Employees ID = 0342
+// Salary = U$ 120000.00
+
+#include <stdio.h>
+
+int main(){
+    int id, working, amount;
+    float result;
+   
+    printf("Input the Employees ID: ");
+    scanf("%d", &id);
+    printf("Input the working hrs: ");
+    scanf("%d",&working);
+    printf("Salary amount/hr: ");
+    scanf("%d", &amount);
+    result = working*amount;
+    printf("Employees ID = %d \n", id);
+    printf("Salary = U$ %f \n",result);
+    return 0;
+    
+}
+
+Q8. //  Write a C program that accepts three integers and find the maximum of three. Go to the editor
+// Test Data :
+// Input the first integer: 25
+// Input the second integer: 35
+// Input the third integer: 15
+// Expected Output:
+// Maximum value of three integers: 35
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int a, b, c, result, max;
+    
+    printf("Input the first integer:  ");
+    scanf("%d",&a);
+    printf("Input the second integer:  ");
+    scanf("%d",&b);
+    printf("Input the third integer:  ");
+    scanf("%d",&c);
+     result=(a+b+abs(a-b))/2;
+    max=(result+c+abs(result-c))/2;
+    printf("Maximum value of three interger: %d", max);
+    return 0;
+    
+}
+
+
+Q.9 //  Write a C program to calculate a bike’s average consumption from the given total distance (integer value) traveled (in km) and spent fuel (in liters, float number – 2 decimal point). Go to the editor
+// Test Data :
+// Input total distance in km: 350
+// Input total fuel spent in liters: 5
+// Expected Output:
+// Average consumption (km/lt) 70.000
+
+
+#include <stdio.h>
+int main(){
+    int a;
+    float b;
+    printf("Input total distance in km: ");
+    scanf ("%d",&a);
+    
+    printf("Input total fuel spent in liters: ");
+    scanf ("%f",&b);
+    
+    printf("Average consumption (km/lt): %3f \n",a/b);
+   
+    return 0;
+}
+
+Q10. // Write a C program to calculate the distance between the two points. Go to the editor
+// Test Data :
+// Input x1: 25
+// Input y1: 15
+// Input x2: 35
+// Input y2: 10
+// Expected Output:
+// Distance between the said points: 11.1803
+
+#include <stdio.h>
+#include <math.h>
+
+
+int main() {
+	float x1, y1, x2, y2, gdistance;
+	printf("Input x1: ");
+	scanf("%f", &x1);
+	printf("Input y1: ");
+	scanf("%f", &y1);
+              printf("Input x2: ");
+	scanf("%f", &x2);
+	printf("Input y2: ");
+	scanf("%f", &y2);
+	gdistance = ((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1));
+	printf("Distance between the said points: %.4f", sqrt(gdistance));
+	printf("\n");
+	return 0;
+}
+	
+
+
 
 
 
