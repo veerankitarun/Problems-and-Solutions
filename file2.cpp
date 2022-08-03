@@ -323,7 +323,62 @@ int main() {
 }
 
 	
+Q13. // Write a C program to convert a given integer (in days) to years, months and days, assumes that all months have 30 days and all years have 365 days. 
+//                                       Test Data :
+// Input no. of days: 2535
+//                                   Expected Output:
+// 6 Year(s)
+// 11 Month(s)
+// 15 Day(s)
 
+#include <stdio.h>
+int main() {
+	int days, y, m, d;	
+	
+	printf("Input no. of days: ");
+	
+	scanf("%d", &days);
+	
+	y =  (int) days/365;
+	
+	days = days-(365*y);
+		
+	m = days/30;
+	
+	d = days-(m*30);
+	
+	printf(" %d Year(s) \n %d Month(s) \n %d Day(s)", y, m, d);
+	return 0;
+}
+
+Q14. // Write a C program that accepts 4 integers p, q, r, s from the user where q, r and s are positive and p is even. If q is greater than r and s is greater than p and if the sum of r and s is greater than the sum of p and q print "Correct values", otherwise print "Wrong values". Go to the editor
+//                             Test Data :
+// Input the second integer: 35
+// Input the third integer: 15
+// Input the fourth integer: 46
+//                      Expected Output:
+// Wrong values
+
+#include <stdio.h>
+int main(){
+    int p, q, r, s;
+    printf("Input the first integer :");
+    scanf("%d", &p);
+    printf("Input the second integer: ");
+    scanf("%d", &q);
+    printf("Input the third integer:");
+    scanf("%d", &r);
+    printf("Input the fourth integer :");
+    scanf("%d", &s);
+    if((q > r) && (s > p) && ((r+s) > (p+q)) && (r > 0) && (s > 0) && (p%2 == 0))
+	 {
+		printf("\nCorrect values\n");
+	} 
+	else {
+		printf("\nWrong values\n");
+	}
+	return 0;
+}
 
 
 
