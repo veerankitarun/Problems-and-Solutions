@@ -381,7 +381,78 @@ int main(){
 }
 
 
+Q15.
+	// Write a C program to print the roots of Bhaskara’s formula from the given three floating numbers. Display a message if it is not possible to find the roots. Go to the editor
+// Test Data :
+// Input the first number(a): 25
+// Input the second number(b): 35
+// Input the third number(c): 12
+// Expected Output:
+// Root1 = -0.60000
+// Root2 = -0.80000
 
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    double a, b, c, pr;
+    printf("\n input the first (a);");
+    scanf("%lf" ,&a);
+    printf("\n input the second (a);");
+    scanf("%lf" ,&b);
+    printf("\n input the third (a);");
+    scanf("%lf" ,&c);
+    
+    pr = (b*b) - (4*(a)*(c));
+    
+    if(pr>0 && a !=0){
+        double x, y;
+        pr = sqrt(pr);
+        x=(-b+pr)/(2*a);
+    	y = (-b - pr)/(2*a);
+    	printf("Root1 = %.5lf\n", x);
+		printf("Root2 = %.5lf\n", y);
+    	
+    }
+    else
+	 {
+		printf("\nImpossible to find the roots.\n");
+	}
+	
+	return 0;
+}
+
+Q16//  Write a C program that reads an integer and check the specified range where it belongs. Print an error message if the number is negative and greater than 80. Go to the editor
+// Test Data :
+// Input an integer: 15
+// Expected Output:
+// Range [0, 20]
+#include <stdio.h>
+
+int main() {
+	int x;
+	printf("Input an integer: "); 
+	scanf("%d", &x);
+	if(x >=0 && x <= 20) 
+	{
+		printf("Range [0, 20]\n");
+	} 
+	else if(x >=21 && x <= 40) 
+	{
+		printf("Range (25,50]\n");
+	} 
+	else if(x >=41 && x <= 60) 
+	{
+		printf("Range (50,75]\n");
+	} 
+	else if(x >61 && x <= 80) {
+		
+		printf("Range (61,80)\n");
+	} 
+	else printf("Outside the range\n");
+		
+	return 0;
+}
 
 
 
