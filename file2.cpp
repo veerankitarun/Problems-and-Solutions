@@ -454,6 +454,71 @@ int main() {
 	return 0;
 }
 
+Q17 // Write a C program that read 5 numbers and sum of all odd values between them. Go to the editor
+//                               Test Data :
+// Input the first number: 11
+// Input the second number: 17
+// Input the third number: 13
+// Input the fourth number: 12
+// Input the fifth number: 5
+//                                Expected Output:
+// Sum of all odd values: 46
+
+
+#include <stdio.h>
+int main(){
+    int a, number[5], total=0;
+    printf("Input an integer: ");
+    scanf("%d", &number[0]);
+    printf("\n input the second number: ");
+    scanf("%d", &number[1]);
+     printf("\n input the second number: ");
+    scanf("%d", &number[2]);
+     printf("\n input the second number: ");
+    scanf("%d", &number[3]);
+     printf("\n input the second number: ");
+    scanf("%d", &number[4]);
+     for(a=0; a<5; a++){
+         if((number[a]%2) != 0)
+         {
+             total += number[a];
+         }
+     }
+        	printf("\nSum of all odd values: %d"  ,total);
+
+	return 0;
+     
+}
+
+
+Q18. // Write a C program that reads three floating values and check if it is possible to make a triangle with them. Also calculate the perimeter of the triangle if the said values are valid. Go to the editor
+//                                           Test Data :
+// Input the first number: 25
+// Input the second number: 15
+// Input the third number: 35
+//                                       Expected Output:
+// Perimeter = 75.0
+#include <stdio.h>
+int main() {
+	float  x, y, z, P, A;
+    printf("\nInput the first number: "); 
+    scanf("%f", &x);
+    printf("\nInput the second number: ");
+    scanf("%f", &y);
+    printf("\nInput the third number: ");
+    scanf("%f", &z);
+
+    if(x < (y+z) && y < (x+z) && z < (y+x)) 
+     {  
+	 P = x+y+z;
+	 printf("\nPerimeter  = %.1f\n", P);	 
+	 
+    }
+    else
+    {
+    	printf("Not possible to create a triangle..!");
+	}
+}
 
 
 
