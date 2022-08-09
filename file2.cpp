@@ -572,6 +572,70 @@ int main() {
 	return 0;
 }
 
+Q21. // Write a C program that prints all even numbers between 1 and 50 (inclusive). Go to the editor
+//                              Test Data :
+// Even numbers between 1 to 50 (inclusive):
+//                          Expected Output:
+// 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50
+
+#include <stdio.h>
+int main(){
+    int i;
+    printf("Even numbers between 1 to 50 (inclusive): ");
+    for (i=0; i<50; i++){
+        if( i%2 ==0){
+            printf("%d \n", i);
+        }
+    }
+    return 0;
+}
+
+Q22.// Write a C program that read 5 numbers and counts the number of positive numbers and negative numbers. Go to the editor
+//                              Test Data :
+// Input the first number: 5
+// Input the second number: -4
+// Input the third number: 10
+// Input the fourth number: 15
+// Input the fifth number: -1
+//                            Expected Output:
+// Number of positive numbers: 3
+// Number of negative numbers: 2
+
+#include <stdio.h>
+int main(){
+    float numbers[5];
+    int j, pctr=0, nctr=0;
+	printf("\nInput the first number: "); 
+    scanf("%f", &numbers[0]);
+    printf("\nInput the second number: "); 
+    scanf("%f", &numbers[1]);
+    printf("\nInput the third number: "); 
+    scanf("%f", &numbers[2]);
+	printf("\nInput the fourth number: "); 
+    scanf("%f", &numbers[3]);
+    printf("\nInput the fifth number: "); 
+    scanf("%f", &numbers[4]);
+    
+    for(j = 0; j < 5; j++) {
+		if(numbers[j] > 0)
+		{
+			
+			pctr++;
+		}
+		else if(numbers[j] < 0)
+		{
+			nctr++;
+		}
+	}
+	printf("\nNumber of positive numbers: %d", pctr);
+	printf("\nNumber of negative numbers: %d", nctr);
+	printf("\n");
+	return 0;
+        
+}
+
+
+
 
 
 
