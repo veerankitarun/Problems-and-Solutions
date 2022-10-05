@@ -669,6 +669,68 @@ printf("\nSum of all odd values: %d", total);
 	}
 
 
+// Write a C program to print the roots of Bhaskara’s formula from the given three floating numbers. Display a message if it is not possible to find the roots.
+
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    double a, b, c, pr1;
+    printf(" enter the first number (a): ");
+    scanf("%lf", &a );
+    printf("enter the second number (b): ");
+    scanf("%lf", &b );
+    printf("enter the third number (c): ");
+    scanf("%lf", &c);
+    
+    pr1= (b*b)- (4*(a)*(c));
+    
+    if (pr1 >0 && pr1 != 0){
+        double x, y;
+        pr1 = sqrt(pr1);
+        x =(-b + pr1)/(2*(a));
+        y =(-b-pr1)/(2*(a));
+        printf("root1 %lf", x);
+        printf("root2 %lf", y);
+    }
+    else
+    {
+        printf("impossible to find the roots ");
+    }
+    return 0;
+}
+
+// writing a program for printing the range of given interger
+
+#include <stdio.h>
+
+int main() {
+	int x;
+	printf("\nInput an integer: "); 
+	scanf("%d", &x);
+	if(x >=0 && x <= 20) 
+	{
+		printf("Range [0, 20]\n");
+	} 
+	else if(x >=21 && x <= 40) 
+	{
+		printf("Range (25,50]\n");
+	} 
+	else if(x >=41 && x <= 60) 
+	{
+		printf("Range (50,75]\n");
+	} 
+	else if(x >61 && x <= 80) {
+		
+		printf("Range (61,80]\n");
+	} 
+	else 
+	{
+	printf("Outside the range\n");
+	}	
+	return 0;
+}
+
 
 
 
