@@ -733,7 +733,36 @@ int main() {
 
 
 
-
+// Write a C program to check whether a given integer is positive even, negative even, positive odd or negative odd. Print even if the number is 0.
+// Test Data :
+// Input an integer: 13
+// Expected Output:
+// Positive Odd
+#include <stdio.h>
+int main(){
+    int x;
+    printf("Input an integer: "); // initially it print the funcition
+    scanf("%d", &x);  // it will take the value and store it
+    
+    if (x==0){
+        printf("positive \n"); // if x=0 then it will print the function
+    }
+    else if (x<0 && (x%2) !=0){   // it will check the condition
+        printf("Negative Odd \n"); // 
+        
+    }
+    else if (x<0 && (x%2) == 0){ 
+        printf("negative even \n");
+    }
+    else if (x>0 && (x%2 !=0)){
+        printf("positive odd \n");
+    }
+    else if (x>0 && (x%2) == 0){
+        printf("positive even \n");
+    }
+    return 0;  // after it will return to 0
+    
+}
 
 
 
